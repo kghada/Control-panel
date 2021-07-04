@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" lang="en">
+        <meta http-equiv="X-UA-Compatible" content="utf-8">
+        <title>ControlPanel</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="main.css">
+ 
+               
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="brand-title">Robotic Base </div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="RA.html">Robotic Arm Control-panel</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+ 
+        </div>
+
+        <span class="header">
+            <h3>Control Panel</h3>
+        </span>
+
+        <div class="showcase">
+            <form action="index.php" method='POST'>
+        <div>
+            <button class="button" name="Forward">Forward</button> 
+        </div>
+        <div>  
+            <button class="button" name="Left">left</button>
+            <button class="button" name="Stop">Stop</button>
+            <button class="button" name="Right">Right</button> 
+           
+        </div>
+        <div>
+            <button class="button" name="Backward">Backward</button>
+        </div>  
+        </form>
+        </div>
+
+        <script>
+            /* Toggle between adding and removing the "responsive" class to navbar when the user clicks on the icon */
+            const toggleButton = document.getElementsByClassName('toggle-button')[0]
+            const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+             toggleButton.addEventListener('click', () => {
+                    navbarLinks.classList.toggle('active')})
+        </script>
+
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "0cf657e3-d049-47d0-ae7a-83e1d63e06d5", // The ID of this integration.
+            region: "eu-gb", // The region your integration is hosted in.
+            serviceInstanceID: "966f1c86-ed39-4421-ab22-f555fd440cfa", // The ID of your service instance.
+            onLoad: function (instance) { instance.render(); }
+        };
+             setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+            document.head.appendChild(t);
+        });
+    </script>
+
+    
+    </body>
+</html>
