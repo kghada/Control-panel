@@ -8,9 +8,6 @@ body {
   height: 100vh;
   overflow: hidden;
   justify-content: center;
-  /*background: linear-gradient(170deg, #4c04f5c7, #239bd9, #08597971); */
-
-  /* background: rgba(88, 105, 143, 0.733); */
   background: rgba(87, 91, 99, 0.986);
 }
 
