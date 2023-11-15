@@ -8,7 +8,7 @@ body {
   height: 100vh;
   overflow: hidden;
   justify-content: center;
-  background: rgba(87, 91, 99, 0.986);
+  background: #545d67f1;
 }
 
 /* navbar styles*/
