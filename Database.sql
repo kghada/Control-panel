@@ -27,29 +27,31 @@ SET time_zone = "+00:00";
 -- Table structure for table `directions`
 --
 
+
 CREATE TABLE `directions` (
-  `Id` int(4) NOT NULL,
-  `Forward` varchar(10) NOT NULL,
-  `Backward` varchar(10) NOT NULL,
-  `Stop` varchar(10) NOT NULL,
-  `L` varchar(10) NOT NULL,
-  `R` varchar(10) NOT NULL
+  `Id` int(4) NOT NULL AUTO_INCREMENT, --allows the database to automatically generate a unique identifier for each row
+  `Forward` enum('f', '') NOT NULL DEFAULT '',
+  `Backward` enum('b', '') NOT NULL DEFAULT '',
+  `Stop` enum('s', '') NOT NULL DEFAULT '',
+  `Left` enum('l', '') NOT NULL DEFAULT '',
+  `Right` enum('r', '') NOT NULL DEFAULT '',
+  PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `directions`
 --
 
-INSERT INTO `directions` (`Id`, `Forward`, `Backward`, `Stop`, `L`, `R`) VALUES
-(1, '', '', '', '', ''),
-(2, 'f', '', '', '', ''),
-(3, '', '', 's', '', ''),
-(4, '', '', '', '', 'r'),
-(5, '', '', 's', '', ''),
-(6, '', '', '', 'l', ''),
-(7, '', 'b', '', '', ''),
-(8, '', 'b', '', '', ''),
-(9, '', '', '', 'l', '');
+INSERT INTO `directions` (`Forward`, `Backward`, `Stop`, `Left`, `Right`) VALUES
+('', '', '', '', ''),
+('f', '', '', '', ''),
+('', '', 's', '', ''),
+('', '', '', '', 'r'),
+('', '', 's', '', ''),
+('', '', '', 'l', ''),
+('', 'b', '', '', ''),
+('', 'b', '', '', ''),
+('', '', '', 'l', '');
 
 --
 -- Indexes for dumped tables

@@ -34,7 +34,7 @@ echo "Connected successfully <br>";}
 }
 
   if(isset($_POST['Left'])) { 
-    $sql = ("INSERT INTO Directions(L) VALUES ('l')"); 
+    $sql = ("INSERT INTO Directions(Left) VALUES ('l')"); 
     $result = mysqli_query($conn, $sql);
     if($result){
          echo "<br><br> Left value inserted!"; 
@@ -42,12 +42,11 @@ echo "Connected successfully <br>";}
 }
 
   if(isset($_POST['Right'])) { 
-    $sql = ("INSERT INTO Directions(R) VALUES ('r')"); 
+    $sql = ("INSERT INTO Directions(Right) VALUES ('r')"); 
     $result = mysqli_query($conn, $sql);
     if($result){
          echo "<br><br> Right value inserted!"; 
     } else  echo"<br> ERROR: Unable to insert. <br>";
-
-
+}
 
     
