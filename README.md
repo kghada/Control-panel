@@ -32,8 +32,7 @@ This project consists of two main components: a control panel for the robotic ba
         <li>Access the control panel webpages (e.g., <code>index.html</code> and <code>RA.html</code>) through a web browser to start controlling the robot.</li>
   </ul><br>
 
-  <em>License</em>
-   This project is licensed under the <a href="LICENSE">MIT License</a>, allowing for open collaboration and usage.
+
 
 
 
